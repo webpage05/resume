@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelvin Fok | Civil Engineering Portfolio</title>
+    
+    <style>
+        /* --- DESIGN SYSTEM --- */
+        :root {
+            --primary: #003366;   
+            --text: #1d1d1f;
+            --glass: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.4);
+        }
+
+        * { box-sizing: border-box; }
+
+        /* --- THE FANCY ANIMATED BACKGROUND --- */
+        body {
+            margin: 0;
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background: linear-gradient(-45deg, #e3f2fd, #ffffff, #bbdefb, #f5f5f5);
+            background-size: 400% 400%;
+            animation: fluidGradient 15s ease infinite;
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fluidGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 10%;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .logo { font-weight: 800; color: var(--primary); letter-spacing: 1px; }
+        .nav-links a { text-decoration: none; color: var(--text); margin-left: 25px; font-weight: 500; font-size: 0.9rem; }
+
+        .hero { padding: 100px 10%; text-align: left; }
+        .hero h1 { font-size: 4.5rem; margin: 0; letter-spacing: -3px; color: var(--primary); line-height: 1.1; }
+        .hero p { font-size: 1.4rem; max-width: 700px; color: #444; margin-top: 20px; }
+
+        .section-container { padding: 60px 10%; }
+        .section-title { font-size: 2rem; font-weight: 800; margin-bottom: 40px; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* --- SKILL TILES --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-tile {
+            background: var(--glass);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid var(--glass-border);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            height: 100%;
+        }
+
+        .skill-tile:hover {
+            background: white;
+            transform: translateY(-5px);
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .skill-name { font-weight: 800; font-size: 1.1rem; }
+        .skill-type { font-size: 0.75rem; color: var(--primary); font-weight: 700; text-transform: uppercase; }
+
+        .contact-section {
+            margin: 50px 10% 100px 10%;
+            background: var(--primary);
+            color: white;
+            padding: 80px 40px;
+            border-radius: 40px;
+            text-align: center;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            margin-top: 30px;
+        }
+
+        footer { text-align: center; padding: 40px; font-size: 0.8rem; opacity: 0.6; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+        }
+
+        .cert-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">FOK KA FAI, KELVIN</div>
+        <div class="nav-links">
+            <a href="#edu">Education</a>
+            <a href="#skills">Computing</a>
+            <a href="#certs">Certificates</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <span style="font-weight: 800; color: var(--primary); letter-spacing: 2px;">UNDERGRADUATE YEAR 2</span>
+        <h1>Structural Mindset.<br>Modern Engineering.</h1>
+        <p>Applying technical knowledge, problem-solving abilities, and strong work ethic to a civil engineering internship, gaining practical experience in project planning and site management.</p>
+    </header>
+
+    <section class="section-container" id="edu">
+        <h2 class="section-title">Education</h2>
+        <div class="glass-card">
+            <h3>The Hong Kong University of Science and Technology</h3>
+            <p>BEng in Civil Engineering (Year 2)<br>
+            <strong style="color: #2e7d32;">Major GPA: 3.67 | CGPA: 3.52</strong></p>
+        </div>
+        <div class="glass-card">
+            <h3>The Hong Kong Community College (PolyU)</h3>
+            <p>Associate in Engineering (With Distinction)<br>
+            <strong style="color: #2e7d32;">Award GPA: 3.80</strong></p>
+        </div>
+    </section>
+
+    <section class="section-container" id="skills">
+        <h2 class="section-title">Computing Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-tile">
+                <span class="skill-type">Specialized Software</span>
+                <span class="skill-name">SolidWorks & PSPICE & Revit</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-type">Programming</span>
+                <span class="skill-name">C++ Language</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-type">Design Tools</span>
+                <span class="skill-name">AutoCAD</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-type">Productivity</span>
+                <span class="skill-name">Microsoft Office</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-type">Technical Design</span>
+                <span class="skill-name">Engineering Graphics</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-type">General Skills</span>
+                <span class="skill-name">Chinese Typing</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container" id="certs">
+        <h2 class="section-title">Certificates</h2>
+        <div class="skills-grid">
+            
+            <a href="safety_certificate.pdf" target="_blank" class="cert-link">
+                <div class="skill-tile">
+                    <span class="skill-type">Safety Training</span>
+                    <span class="skill-name">Construction Industry Safety Training Certificate</span>
+                </div>
+            </a>
+
+            <a href="bim_ifc.pdf" target="_blank" class="cert-link">
+                <div class="skill-tile">
+                    <span class="skill-type">BIM Training</span>
+                    <span class="skill-name">CIC BIM Viewer: IFC Compatible Software</span>
+                </div>
+            </a>
+
+            <a href="bim_trimble.pdf" target="_blank" class="cert-link">
+                <div class="skill-tile">
+                    <span class="skill-type">BIM Training</span>
+                    <span class="skill-name">CIC BIM Viewer: Trimble Connect</span>
+                </div>
+            </a>
+
+            <a href="bim_navisworks.pdf" target="_blank" class="cert-link">
+                <div class="skill-tile">
+                    <span class="skill-type">BIM Training</span>
+                    <span class="skill-name">CIC BIM Viewer: Navisworks Freedom</span>
+                </div>
+            </a>
+
+            <a href="bim_arcgis.pdf" target="_blank" class="cert-link">
+                <div class="skill-tile">
+                    <span class="skill-type">BIM Training</span>
+                    <span class="skill-name">CIC BIM Viewer: ArcGIS Online</span>
+                </div>
+            </a>
+
+            <a href="bim_autodesk.pdf" target="_blank" class="cert-link">
+                <div class="skill-tile">
+                    <span class="skill-type">BIM Training</span>
+                    <span class="skill-name">CIC BIM Viewer: Autodesk BIM Viewer</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <h2>Available for Internship</h2>
+        <p>Expected Salary: HKD 5,000 / month (Negotiable)</p>
+        <p>Languages: Fluent English, Cantonese, and Putonghua</p>
+        <a href="mailto:kelvinfok11@gmail.com" class="contact-btn">Email Kelvin</a>
+        <div style="margin-top: 30px; font-size: 1.1rem;">Phone: 98881713</div>
+    </section>
+
+    <footer>
+        &copy; 2026 Kelvin Fok Ka Fai | Civil Engineering Portfolio
+    </footer>
+
+</body>
+</html>
