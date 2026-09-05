@@ -51,7 +51,26 @@
         .nav-links a { text-decoration: none; color: var(--text); margin-left: 25px; font-weight: 500; font-size: 0.9rem; }
 
         .hero { padding: 100px 10%; text-align: left; }
-        .hero h1 { font-size: 4.5rem; margin: 0; letter-spacing: -3px; color: var(--primary); line-height: 1.1; }
+        
+        /* --- ANIMATED TEXT EFFECT --- */
+        .animatedtext {
+            font-size: 4.5rem;
+            margin: 0;
+            letter-spacing: -3px;
+            line-height: 1.1;
+            background: linear-gradient(90deg, #fba801, #fdbe49, #003366, #fba801);
+            background-size: 300% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textShine 4s linear infinite;
+        }
+
+        /* Colour moving */
+        @keyframes textShine {
+            to { background-position: 300% center; }
+        }
+
         .hero p { font-size: 1.4rem; max-width: 700px; color: #444; margin-top: 20px; }
 
         .section-container { padding: 60px 10%; }
@@ -119,6 +138,7 @@
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 3rem; }
+            .animatedtext { font-size: 3rem; }
         }
 
         .cert-link {
@@ -140,10 +160,10 @@
             <a href="#contact">Contact</a>
         </div>
     </nav>
-
+    
     <header class="hero">
-        <span style="font-weight: 800; color: var(--primary); letter-spacing: 2px;">UNDERGRADUATE YEAR 3</span>
-        <h1>Structural Mindset <br>Modern Engineering </h1>
+        <span style="font-weight: 800; color: var(--primary); letter-spacing: 2px;"> UNDERGRADUATE YEAR 3 </span>
+        <h1 class="animatedtext">Structural Mindset <br> Modern Engineering</h1>
         <p>Applying technical knowledge, problem-solving abilities, and strong work ethic to a civil engineering internship, gaining practical experience in project planning and site management.</p>
     </header>
 
@@ -190,15 +210,13 @@
         </div>
     </section>
 
-    <!-- Scholorship & Grant Section -->
-
     <!-- NEW Computing Skills SECTION -->
     <section class="section-container" id="skills">
         <h2 class="section-title">Computing Skills</h2>
         <div class="skills-grid">
             <div class="skill-tile">
                 <span class="skill-type">Specialized Software</span>
-                <span class="skill-name">SolidWorks  & Revit & <br> Flow-3D-Hydro </span>
+                <span class="skill-name">SolidWorks & Revit & <br> Flow-3D-Hydro </span>
             </div>
             <div class="skill-tile">
                 <span class="skill-type">Programming</span>
@@ -265,7 +283,7 @@
                 </div>
             </a>
 
-            <a href="esri_argis.pdf" target="_blank" class="cert-link">   <!-- Environmental Systems Research Institute, Inc -->      
+            <a href="esri_argis.pdf" target="_blank" class="cert-link">      
                 <div class="skill-tile">
                     <span class="skill-type">BIM Training</span>
                     <span class="skill-name">ArcGIS Online Basics </span>
@@ -273,7 +291,6 @@
             </a>
         </div>
     </section>
-
 
     <section class="contact-section" id="contact">
         <h2>Available for Internship</h2>
